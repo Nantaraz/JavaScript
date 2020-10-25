@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        var tab1 = [2,5,9,4,8]
+        var tab2 = []
+        var sol = []
+        for (var i = 1; i <= 10; i++){
+            var obj = new Object({ val:i , count:1 })
+            tab2.push(obj);
+            }
+            
+        tab2.map( use2 =>{
+              tab1.map( use1 =>{
+                  if( use2.val !== use1){
+                    use2.count += 1;
+                  }     
+              })
+             
+              if ( use2.count > tab1.length  ){
+                  sol.push(use2.val)
+                } 
+          }) 
+          console.log(sol);
+    
+    </script>
+    
+</body>
+</html>

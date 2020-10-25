@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Calcul factorielle</title>
+</head>
+<body>
+	<div>
+		<label>entrer le mot</label>
+		<input type="text" id="blabla"><br/>
+		<button onClick = "isPalindrome()">Tester</button>
+	</div>
+	<script>
+
+	var demimot1 = "";
+	var demimot2 = "";
+	var demimot = "";
+	var demimot3 = new Array();
+	function isPalindrome(mot){
+		mot = document.getElementById("blabla").value;
+	 		for(var i=0; i<mot.length/2;i++){
+				 demimot1 += mot.charAt(i);
+			 }
+			 demimot2 = mot.substring(mot.length/2);
+			 for(var i=0; i<demimot2.length;i++){
+				 demimot3[i] = demimot2.charAt(i);
+			 }
+			 demimot2 = demimot3.reverse()
+			 for(var i=0; i<demimot3.length;i++){
+				 demimot += demimot2[i];
+			 }
+			 if(demimot1 == demimot){
+				 console.log("palindrome");
+			 }
+			 else{
+				 console.log("pas palindrome");
+				 
+			 }
+	 }
+
+
+	</script>
+</body>
+</html>

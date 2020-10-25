@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin-top: 150px;
+            background-color: beige;
+        }
+        .i {
+            /* background-color: blue; */
+        }
+        .s {
+            border: 1px solid black;
+            width: 400px;
+            height: 250px;
+            background-color: cadetblue;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="s">
+
+            <input type="text" id="blabla"/>
+            <button class='i' onClick="myFunction()">crypter</button>
+            <div id="k"></div>
+        </div>
+    </center>
+    <script >
+        function myFunction(){
+            document.getElementById("k").innerHTML=" "
+            var n=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+            var m=[14,1,17,3,6,25,8,7,10,24,12,11,2,13,16,15,18,4,21,19,2,20,9,23,25,0]
+            var b=document.getElementById("blabla").value
+            var c=b.split('')
+            var v=[1,2]
+            var e=[]
+            for(let i=0;i<c.length;i++){
+                for(let j=0;j<n.length;j++){
+                    if(c[i]==n[j]){
+                        e.push(Math.pow(m[j],v[i%2]))
+                    }
+                }
+               
+                document.getElementById("k").innerHTML+=e[i]+" "
+                
+            }
+            
+        }
+        
+       
+
+
+    </script>
+</body>
+</html>

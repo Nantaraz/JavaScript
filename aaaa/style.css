@@ -1,0 +1,10 @@
+table {
+    border-collapse: collapse;
+    margin-top: 45px;
+}
+td,th,tr
+{
+    border: 1px solid yellowgreen;
+    width: 80px;
+    text-align: center;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin-top: 150px;
+            background-color: beige;
+        }
+        .i {
+            /* background-color: blue; */
+        }
+        .s {
+            border: 1px solid black;
+            width: 400px;
+            height: 250px;
+            background-color: cadetblue;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="s">
+
+            <!-- <input type="text" id="blabla"/> -->
+            <button class='i' onClick="myFunction()">sortie</button>
+            <div id="k"></div>
+        </div>
+    </center>
+    <script >
+        
+            var tab1 = [6,5,7,9,10,6,7,1,10,5]
+            var tab2 = []
+            var p = []
+            for ( var i = 1; i <= 10; i ++ ){
+                var obj=new Object({valeur:i,count:1})
+                    tab2.push(obj)
+            } 
+
+            tab2.filter( use => {
+                tab1.filter( index =>{
+                      if(use.valeur !== index){
+                        use.count+=1
+                      } 
+                })
+                if(use.count > tab1.length){
+                          p.push(use.valeur)  
+                        }
+            })
+            console.log(p);
+
+    </script>
+</body>
+</html>

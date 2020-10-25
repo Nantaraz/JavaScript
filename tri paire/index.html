@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin-top: 150px;
+            background-color: beige;
+        }
+        .s {
+            border: 1px solid black;
+            width: 400px;
+            height: 250px;
+            background-color: cadetblue;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="s">
+            <!-- <label> entrer n</label>
+            <input type="text" id="blabla"/><br/>
+            <label> entrer i</label>
+            <input type="text" id="blabla1"/><br/>
+            <label> entrer j</label>
+            <input type="text" id="blabla2"/><br/>
+            <label> entrer k</label>
+            <input type="text" id="blabla3"/><br/>
+            <label> n armstrong si i*i*i + j*j*j + k*k*k = n </label><br/> -->
+            <button class='i' onClick="myFunction()">crypter</button>
+            
+            <div id="k"></div>
+        </div>
+    </center>
+    <script >
+            var tab = [2,5,7,8,9,12]
+            var n = 7;
+            for (var i = 0;i<tab.length ;i++){ 
+                if(tab[i]%2 == 0){ 
+                    console.log(tab[i]," et ", n - tab[i] )
+                }
+            }
+
+    </script>
+</body>
+</html>
